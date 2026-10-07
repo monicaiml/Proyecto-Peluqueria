@@ -61,8 +61,36 @@
 
 # 3. Estructura Git
 - Diagrama de l'estructura de branques (Gitflow, Trunk-based, etc.) amb **mermaid**
+
+```mermaid
+    gitGraph 
+            commit id: "Initial commit"
+            commit id: "Project setup"
+            branch feature/login
+            checkout feature/login
+            commit id: "Login form"
+            commit id: "Auth validation"
+            checkout main
+            merge feature/login
+            commit id: "v1.0 - Login ready"
+```
+
 - Justificació de l'estructura triada
+
+    > Hemos elegido una estructura basada en una rama principal main y ramas feature para desarrollar las diferentes funcionalidades de la aplicación. <br> La rama main contiene siempre la versión estable del proyecto. Para desarrollar una nueva funcionalidad, se crea una rama independiente a partir de main, por ejemplo feature/login.<br>De esta forma, cada integrante puede trabajar en una funcionalidad sin modificar directamente la rama principal. Una vez terminada y comprobada la funcionalidad, se realiza un merge hacia main.<br>Hemos elegido esta estructura porque somos un equipo pequeño de dos personas y consideramos que utilizar un sistema más complejo como Gitflow no sería necesario para este proyecto.
+
 - Convenció de noms de branques i commits
+
+    > Para las ramas utilizaremos nombres descriptivos que indiquen claramente la funcionalidad que se está desarrollando. <br>Las ramas de nuevas funcionalidades seguirán el formato:<br>`feature/nombre-funcionalidad`
+
+    > Para los commits utilizaremos una convención basada en Conventional Commits, utilizando diferentes tipos según el cambio realizado:
+    >- `feat`: nueva funcionalidad.
+    >- `fix`: corrección de errores.
+    >- `docs`: cambios en la documentación.
+    >- `style`: cambios de formato o estilos.
+    >- `refactor`: modificación del código sin añadir funcionalidades.
+    >- `test`: creación o modificación de pruebas.
+
 
 !!! TIP BONUS POINTS
     **BONUS**:
