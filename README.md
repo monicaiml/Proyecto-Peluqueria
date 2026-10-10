@@ -1,4 +1,4 @@
-# 💇 Projecte Intermodular – Projecte Peluquería
+# 💇 Proyecto Peluquería
 
 ## 📌 Descripción del proyecto
 
