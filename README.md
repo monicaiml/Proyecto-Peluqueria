@@ -2,7 +2,7 @@
 
 ## 📌 Descripción del proyecto
 
-Proyecto académico desarrollado en equipo por Marc Bonet e Isabel Martínez dentro del módulo de Proyecto Intermodular.
+Proyecto académico desarrollado en equipo por Marc Bonet e Isabel Martínez
 
 El objetivo es diseñar y desarrollar una aplicación web para gestionar las citas de una peluquería, facilitando tanto las reservas de los clientes como la organización de la agenda del personal.
 
