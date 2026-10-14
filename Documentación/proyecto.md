@@ -149,6 +149,16 @@
 # 5. Solució
 - Quines pantalles s'han implementat (captures de pantalla)
 - Taules de la base de dades implementades
+-### Diseño inicial de la base de datos de SalonFlow
+
+La base de datos de SalonFlow estará diseñada para gestionar las citas de una peluquería. Inicialmente, se propone utilizar **4 tablas: cliente, servicio, cita y factura**.
+
+- **Cliente:** almacenará los datos personales y de contacto de los clientes.
+- **Servicio:** guardará los servicios que ofrece la peluquería, sus precios y su duración.
+- **Cita:** registrará las citas, relacionando a cada cliente con el servicio solicitado, la fecha y la hora.
+- **Factura:** almacenará el importe de las citas facturadas.
+
+Para esta primera fase se diseñará la tabla `cliente`, que permitirá registrar y consultar la información de los clientes. El resto de las tablas se definirán posteriormente.
 - Lògiques de negoci principals implementades
 - Funcionalitats pendents / fora d'abast (si n'hi ha)
 
