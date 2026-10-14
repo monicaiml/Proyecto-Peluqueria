@@ -101,7 +101,50 @@
 # 4. Tecnologies
 - Stack triat (Frontend, Backend, Base de Dades, Infraestructura)
 - Justificació de la tria de cada tecnologia
+
+    > Java para el desarrollo de la logica de la aplicación. Con este tendremos el lenguaje principal. Este es un lenguaje orientado a objetos que facilita la organización y el codigo entre clases, este lenguaje permite el desarollo de aplicaciones estructuradas, tambien tiene facilidad de gestionar errores y validar datos, y de cara al futuro permite plantear diferentes integraciones.
+
+    > PostgreSQL sera el sgbd encargado de conservar la información de los diferentes cliente, este es un sistema de codigo abierto que nos permite definir relaciones, generar restricciones de identidad y transacciones que garantizan la coherencia de datos.
+
+    > HTML i CSS se utilitzaran para construir la interfície de la aplicacion i organitzar visualmente la información que necessiten consultar los responsables. HTML permite estructurar el contenido mediante elementos semanticos. En cuanto a CSS, este permite definir el disseño visual, los colores, la tipografia, los espacios i la distribución de los componentes. A este diseño de la interficie le complementará JavaScript el cual proporcionará comportamientos interactivos.
+
+    > Git y GitHub serán las herramientas utilizadas para mantener el control de versiones, la colaboración entre diferentes miembros del grupo y donde se pondrá gestionar el historial de cambios de los codigos.
+
+
 - Diagrama d'arquitectura (mermaid)
+
+```mermaid
+        flowchart TB
+            CLIENTE["Cliente de la peluqueria"]
+            PERSONAL["Personal de la peluqueria"]
+
+            subgraph FRONTEND["Frontend — Interfície web"]
+                HTML["HTML"]
+                CSS["CSS"]
+                JS["JavaScript"]
+            end
+
+            subgraph BACKEND["Backend — Lògica de l'aplicació"]
+                JAVA["Java"]
+                GESTIO["Gestió de cites<br/>i validació de dades"]
+            end
+
+            DB[("PostgreSQL<br/>Clients, serveis i cites")]
+
+            subgraph DESENVOLUPAMENT["Control de versions"]
+                GIT["Git"]
+                GITHUB["GitHub"]
+                GIT --> GITHUB
+            end
+
+            CLIENTE --> FRONTEND
+            PERSONAL --> FRONTEND
+            HTML --> JS
+            CSS --> HTML
+            JS <--> JAVA
+            JAVA --> GESTIO
+            GESTIO <--> DB
+```
 
 # 5. Solució
 - Quines pantalles s'han implementat (captures de pantalla)
