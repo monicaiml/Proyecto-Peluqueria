@@ -1,4 +1,4 @@
-# 💇 Proyecto Peluquería
+# 💇 SalonFlow
 
 ## 📌 Descripción del proyecto
 
