@@ -164,6 +164,43 @@ Para esta primera fase se diseñará la tabla `cliente`, que permitirá registra
 
 # 6. Diagrames
 - Diagrama de Dades (ER)
+```mermaid
+    erDiagram
+        CLIENTE ||--o{ CITA : "reserva / tiene"
+        PELUQUERO ||--o{ CITA : "atiende"
+        CITA }|--|{ SERVICIO : "incluye"
+        CITA ||--o| FACTURA : "genera"
+
+        CLIENTE {
+            int id_cliente PK
+            string nombre
+            string telefono
+        }
+
+        PELUQUERO {
+            int id_peluquero PK
+            string nombre
+            string especialidad
+        }
+
+        CITA {
+            int id_cita PK
+            datetime fecha_hora
+            string estado
+        }
+
+        SERVICIO {
+            int id_servicio PK
+            string nombre_servicio
+            decimal precio
+        }
+
+        FACTURA {
+            int id_factura PK
+            datetime fecha_emision
+            decimal total
+        }
+```
 - Diagrama de Classes (si aplica)
 - Diagrama de Seqüència d'almenys 1 procés
 
